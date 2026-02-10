@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Promise Day - For Allaiha</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .page {
+            display: none;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h1 {
+            color: #764ba2;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.8;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cursive {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #764ba2;
+            text-align: center;
+            margin: 30px 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .next-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .next-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .emoji {
+            font-size: 4em;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hint {
+            color: #764ba2;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #764ba2;
+            color: #764ba2;
+            font-size: 1.3em;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff6b9d;
+            font-size: 20px;
+            animation: float 6s infinite ease-in-out;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .message {
+                font-size: 1em;
+            }
+            
+            .cursive {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    
+    <div class="container">
+        <!-- Page 1 -->
+        <div class="page active" id="page1">
+            <h1>Happy Promise Day</h1>
+            <h1 style="font-size: 2em; margin-bottom: 20px;">Babygirl... Allaiha Baby</h1>
+            <div class="message">
+                On this Special Day... There's a lot I wanna promise you so many things, I just wanted to say you something.... I really don't know who am I to you.... But if you'd ask me who you are to me I'd say <strong>HOME</strong>.... Where I find myself everyday going back to!!!
+                <br><br>
+                Baby, as each day passes I realise even more how much I love you and how much I wanna spend my entire life with you... marry you... grow old with you.... Have kids with you.... Live a peaceful loving life with you... And die in old age!!!
+                <br><br>
+                Baby, I don't know what our future holds for us!! But I really wish that our future is together!!! You and me both in it!!! I love you and you love me with two kids of our own living a happy and peaceful life....
+                <br><br>
+                I am not a great man baby, but I promise I will be a perfect man for you and In Sha Allah for our kids in future!!!
+            </div>
+            <div class="next-btn" onclick="nextPage(2)">
+                <div class="emoji">🌹</div>
+                <div class="hint">Click the rose to continue...</div>
+            </div>
+            <div class="footer">I Love You Jaan</div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="page" id="page2">
+            <h1>My Promise To You</h1>
+            <div class="message">
+                Baby, the next thing I wanna promise you is that, whatever happens baby I don't wanna leave you at any cost. Baby I promise to provide you whatever I can and be with you till my very last breath..... and never leave and just love you and have a peaceful perfect life with you baby.
+            </div>
+            <div class="next-btn" onclick="nextPage(3)">
+                <div class="emoji">❤️</div>
+                <div class="hint">Click to see more...</div>
+            </div>
+            <button class="back-btn" onclick="prevPage(1)">← Back</button>
+            <div class="footer">I Love You Jaan</div>
+        </div>
+
+        <!-- Page 3 -->
+        <div class="page" id="page3">
+            <h1>I Promise...</h1>
+            <div class="message">
+                Baby, I promise to not get mad or rude at you and sorry for whatever I say I don't mean it baby but I will try my best to not do it....
+            </div>
+            <div class="cursive">Allaiha Meri Jaan</div>
+            <div class="next-btn" onclick="nextPage(4)">
+                <div class="emoji">🌸</div>
+                <div class="hint">Continue reading...</div>
+            </div>
+            <button class="back-btn" onclick="prevPage(2)">← Back</button>
+            <div class="footer">I Love You Jaan</div>
+        </div>
+
+        <!-- Page 4 -->
+        <div class="page" id="page4">
+            <h1>Our Future Together</h1>
+            <div class="message">
+                Baby, I promise that our Shaadi will be an Umrah Shaadi. Then we will move abroad please babyy.
+            </div>
+            <div class="next-btn" onclick="nextPage(5)">
+                <div class="emoji">💐</div>
+                <div class="hint">Almost there...</div>
+            </div>
+            <button class="back-btn" onclick="prevPage(3)">← Back</button>
+            <div class="footer">I Love You Jaan</div>
+        </div>
+
+        <!-- Page 5 -->
+        <div class="page" id="page5">
+            <h1>From My Heart</h1>
+            <div class="message">
+                Baby, there's so many things I wanna promise today. But tu text karle and jo promise lena hai lele baby..... and also baby I love you so much I can promise to never hurt you and leave you and stop loving you.
+            </div>
+            <div class="cursive">I Love You So Much Baby, Allaiha...</div>
+            <div class="cursive" style="font-size: 1.5em;">Inshallah I promise to make you my wife one day</div>
+            <button class="back-btn" onclick="prevPage(4)">← Back</button>
+            <div class="footer">I Love You Jaan</div>
+        </div>
+    </div>
+
+    <script>
+        function nextPage(pageNum) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page' + pageNum).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function prevPage(pageNum) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page' + pageNum).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Create floating hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+            heart.style.animationDelay = Math.random() * 2 + 's';
+            document.getElementById('hearts').appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        // Generate hearts periodically
+        setInterval(createHeart, 800);
+        
+        // Initial hearts
+        for(let i = 0; i < 5; i++) {
+            setTimeout(createHeart, i * 300);
+        }
+    </script>
+</body>
+</html>
